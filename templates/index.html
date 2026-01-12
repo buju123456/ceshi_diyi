@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>图书管理</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background: #f0f0f0; }
+    input, button { padding: 6px; margin: 4px; }
+  </style>
+</head>
+<body>
+  <h1>简单图书管理系统</h1>
+
+  <div>
+    <input id="search" placeholder="搜索标题或作者" />
+    <button onclick="loadBooks()">搜索</button>
+    <button onclick="loadBooks(true)">刷新</button>
+  </div>
+
+  <h2>新增图书</h2>
+  <div>
+    <input id="title" placeholder="书名" />
+    <input id="author" placeholder="作者" />
+    <input id="year" placeholder="年份" type="number" style="width:80px" />
+    <input id="isbn" placeholder="ISBN" />
+    <button onclick="addBook()">添加</button>
+  </div>
+
+  <h2>图书列表</h2>
+  <table id="booksTable">
+    <thead>
+      <tr><th>ID</th><th>书名</th><th>作者</th><th>年份</th><th>ISBN</th><th>可借</th><th>操作</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
